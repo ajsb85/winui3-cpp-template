@@ -21,13 +21,13 @@ namespace winrt::HelloWorldWinUI3::implementation
 
     void HomePage::MyButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
-        ProcesarInformacionAsincrona();
+        ProcessDataAsync();
     }
 
-    winrt::Windows::Foundation::IAsyncAction HomePage::ProcesarInformacionAsincrona()
+    winrt::Windows::Foundation::IAsyncAction HomePage::ProcessDataAsync()
     {
         // 1. Update text and disable button
-        GreetingTextBlock().Text(L"Procesando información...");
+        GreetingTextBlock().Text(L"Processing data...");
         MyButton().IsEnabled(false);
 
         auto uiDispatcher = this->DispatcherQueue();
@@ -42,7 +42,7 @@ namespace winrt::HelloWorldWinUI3::implementation
         co_await wil::resume_foreground(uiDispatcher);
 
         // 4. Update UI
-        GreetingTextBlock().Text(L"¡Información procesada con éxito!");
+        GreetingTextBlock().Text(L"Data processed successfully!");
         MyButton().IsEnabled(true);
     }
 }

@@ -79,7 +79,7 @@
                 <!-- ── Primary CTA — gradient button ── -->
                 <Button
                     x:Name="MyButton"
-                    Content="Procesar Información (Async)"
+                    Content="Process Data (Async)"
                     Click="MyButton_Click"
                     HorizontalAlignment="Center"
                     MinWidth="220"
