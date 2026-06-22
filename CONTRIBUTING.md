@@ -33,6 +33,45 @@ To maintain code quality and build reliability, please adhere to the following s
   #endif
   ```
 
+
+## 💻 Development Commands (Build, Run, Lint, Test)
+
+Use the following CLI commands (from PowerShell or the VS Developer Command Prompt) to work with the project:
+
+### 1. Restore Dependencies
+Restore NuGet package dependencies (such as the Windows App SDK and C++/WinRT projections):
+```powershell
+nuget restore HelloWorldWinUI3.sln
+```
+
+### 2. Build the Solution
+Compile the application with MSBuild. Always target the `x64` platform:
+```powershell
+msbuild HelloWorldWinUI3.sln /p:Configuration=Debug /p:Platform=x64 /t:Rebuild
+```
+> [!NOTE]
+> If you have run `Rename-WinUIProject.ps1` to customize your application name, replace `HelloWorldWinUI3` in the commands above with your new name.
+
+### 3. Run the Application
+Start the compiled unpackaged executable from the output folder:
+```powershell
+.\x64\Debug\HelloWorldWinUI3\HelloWorldWinUI3.exe
+```
+
+### 4. Lint and Static Analysis
+Run MSBuild with built-in code analysis to check for common C++ coding standard issues:
+```powershell
+msbuild HelloWorldWinUI3.sln /p:RunCodeAnalysis=true /p:Configuration=Debug /p:Platform=x64
+```
+All pull requests must compile warning-free; the project is configured to treat warnings as errors (`/WX` compiler flag).
+
+### 5. Testing
+Verify the following runtime checkpoints before submitting changes:
+- Check that the window background renders with Mica material.
+- Verify that dragging the custom title bar moves the window correctly.
+- Test navigating between **Home** and **Settings** pages in the `NavigationView`.
+- Trigger the background task on the Home page to ensure thread switching executes successfully without blocking or crashing the UI.
+
 ## 🛠️ How to Contribute
 
 1. **Fork the Repository** and clone your fork locally.
