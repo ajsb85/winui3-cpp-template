@@ -12,7 +12,7 @@ namespace winrt::HelloWorldWinUI3::implementation
             winrt::Windows::Foundation::IInspectable const& sender,
             winrt::Microsoft::UI::Xaml::RoutedEventArgs const& args);
 
-        winrt::Windows::Foundation::IAsyncAction ProcesarInformacionAsincrona();
+        winrt::Windows::Foundation::IAsyncAction ProcessDataAsync();
     };
 }
 
