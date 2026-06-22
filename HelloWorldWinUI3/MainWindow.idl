@@ -1,0 +1,11 @@
+// MainWindow.idl
+// Windows Runtime IDL for the MainWindow class.
+
+namespace HelloWorldWinUI3
+{
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+    }
+}

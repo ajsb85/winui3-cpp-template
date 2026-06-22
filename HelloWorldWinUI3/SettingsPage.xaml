@@ -1,0 +1,36 @@
+<Page
+    x:Class="HelloWorldWinUI3.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloWorldWinUI3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid Background="Transparent" Padding="40,24">
+        <StackPanel Spacing="24">
+            <!-- Page Title -->
+            <TextBlock Text="Settings" FontSize="28" FontWeight="Bold" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+
+            <!-- About Section Card -->
+            <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="8" Padding="16">
+                <StackPanel Spacing="8">
+                    <TextBlock Text="WinUI 3 Template App" FontWeight="SemiBold" FontSize="16" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                    <TextBlock Text="Version 2.2.0 (Windows App SDK 2.2.0)" FontSize="13" Opacity="0.7" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                    <TextBlock Text="This template is optimized for creating modular C++/WinRT applications with automatic title bar customization and modern Mica backdrop materials." FontSize="13" Opacity="0.7" TextWrapping="Wrap" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Settings Options Card -->
+            <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ThemeResource DividerStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="8" Padding="16">
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Personalisation" FontWeight="SemiBold" FontSize="16" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                    
+                    <ToggleSwitch Header="Dark Theme" IsOn="True" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                    <ToggleSwitch Header="Mica Backdrop" IsOn="True" Foreground="{ThemeResource ApplicationForegroundThemeBrush}"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

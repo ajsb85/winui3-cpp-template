@@ -1,0 +1,13 @@
+// App.idl
+// Windows Runtime IDL for the App class.
+// The XAML compiler and cppwinrt.exe read this file to generate the
+// App.xaml.g.h / App.g.cpp projection glue.
+
+namespace HelloWorldWinUI3
+{
+    [default_interface]
+    runtimeclass App : Microsoft.UI.Xaml.Application
+    {
+        App();
+    }
+}

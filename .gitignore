@@ -1,0 +1,30 @@
+# Visual Studio C++ / WinUI 3 Git Ignore
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+Generated Files/
+out/
+build/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.priconfig.xml
+*.xbf
+*.obj
+*.log
+*.tlog
+*.pri
+*.pch
+*.ipch
+*.iobj
+*.ipdb
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.lib
+*.exp
+packages/
